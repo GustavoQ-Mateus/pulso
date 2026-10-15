@@ -1,0 +1,10 @@
+<resources>
+    <string name="grupo_series_repeticoes">%1$s · %2$d séries × %3$d repetições</string>
+    <string name="equipamentos">EQUIPAMENTOS: %1$s</string>
+    <string name="demonstracao">Demonstração</string>
+    <string name="reproduzir_video">Reproduzir vídeo</string>
+    <string name="pausar_video">Pausar vídeo</string>
+    <string name="carregando_video">Carregando vídeo…</string>
+    <string name="tempo_video">%1$s / %2$s</string>
+    <string name="tela_cheia">Tela cheia</string>
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Componente.Pulso.Cartao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/espaco_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textoNome"
+            style="@style/Texto.Pulso.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textoSeries"
+            style="@style/Texto.Pulso.Corpo.Secundario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_8"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textoEquipamentos"
+            style="@style/Texto.Pulso.Legenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_8"
+            android:fontFamily="@font/jakarta_regular"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoDemonstracao"
+            style="@style/Componente.Pulso.Botao.Contorno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:text="@string/demonstracao" />
+
+        <FrameLayout
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:background="@drawable/fundo_player"
+            android:visibility="gone">
+
+
+            <ImageButton
+                android:id="@+id/botaoReproduzir"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@drawable/fundo_circulo_branco"
+                android:contentDescription="@string/reproduzir_video"
+                android:src="@drawable/icone_reproduzir"
+                app:tint="@color/anil" />
+
+
+            <LinearLayout
+                android:id="@+id/carregando"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/branco"
+                    app:indicatorSize="36dp" />
+
+                <TextView
+                    style="@style/Texto.Pulso.Legenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_8"
+                    android:text="@string/carregando_video"
+                    android:textColor="@color/branco" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/controles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/Texto.Pulso.Legenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/fundo_selo"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="@dimen/espaco_4"
+                    android:text="@string/demonstracao"
+                    android:textColor="@color/branco" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/espaco_4">
+
+                    <ImageButton
+                        android:id="@+id/botaoPausar"
+                        android:layout_width="@dimen/toque_minimo"
+                        android:layout_height="@dimen/toque_minimo"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/pausar_video"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icone_pausar"
+                        app:tint="@color/branco" />
+
+                    <SeekBar
+                        android:id="@+id/barraProgresso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:progressBackgroundTint="@color/texto_secundario"
+                        android:progressTint="@color/branco"
+                        android:thumbTint="@color/branco" />
+
+                    <TextView
+                        android:id="@+id/textoTempo"
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/branco" />
+
+                    <ImageButton
+                        android:id="@+id/botaoTelaCheia"
+                        android:layout_width="@dimen/toque_minimo"
+                        android:layout_height="@dimen/toque_minimo"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/tela_cheia"
+                        android:padding="14dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icone_tela_cheia"
+                        app:tint="@color/branco" />
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

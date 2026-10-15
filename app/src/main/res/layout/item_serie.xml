@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/espaco_8"
+    android:background="@drawable/fundo_caixa"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/espaco_16">
+
+    <FrameLayout
+        android:id="@+id/indicador"
+        android:layout_width="28dp"
+        android:layout_height="28dp">
+
+        <TextView
+            android:id="@+id/numero"
+            style="@style/Texto.Pulso.Legenda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/visto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:padding="6dp"
+            android:src="@drawable/icone_visto"
+            android:visibility="gone"
+            app:tint="@color/branco" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_16"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            style="@style/Texto.Pulso.Corpo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jakarta_semibold" />
+
+        <TextView
+            android:id="@+id/detalhe"
+            style="@style/Texto.Pulso.Legenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jakarta_regular"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

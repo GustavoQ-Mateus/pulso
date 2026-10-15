@@ -1,0 +1,12 @@
+<resources>
+    <string name="titulo_historico">Histórico</string>
+    <plurals name="dias_seguidos">
+        <item quantity="one">%d dia seguido</item>
+        <item quantity="other">%d dias seguidos</item>
+    </plurals>
+    <string name="continue_treinando">Continue treinando para manter sua sequência</string>
+
+    <string name="historico_vazio_titulo">Nenhum treino registrado</string>
+    <string name="historico_vazio_texto">Conclua seu primeiro treino para começar sua sequência de dias.</string>
+    <string name="ver_treino_de_hoje">Ver treino de hoje</string>
+</resources>

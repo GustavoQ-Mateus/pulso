@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/execucao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_24">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textoProgresso"
+                style="@style/Texto.Pulso.Corpo.Secundario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/jakarta_medium" />
+
+            <ImageButton
+                android:id="@+id/botaoFechar"
+                android:layout_width="@dimen/toque_minimo"
+                android:layout_height="@dimen/toque_minimo"
+                android:layout_marginEnd="-12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/encerrar_treino"
+                android:src="@drawable/icone_fechar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoExercicio"
+            style="@style/Texto.Pulso.Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:gravity="center" />
+
+        <FrameLayout
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/espaco_24">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/anelDescanso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="1000"
+                app:indicatorColor="@color/anil"
+                app:indicatorSize="212dp"
+                app:trackColor="@color/gelo"
+                app:trackThickness="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textoTempo"
+                    style="@style/Texto.Pulso.Destaque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40sp" />
+
+                <TextView
+                    style="@style/Texto.Pulso.Legenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="@string/descanso"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/listaSeries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_24"
+            android:orientation="vertical" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAcao"
+            style="@style/Componente.Pulso.Botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pular_descanso" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/concluido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_24">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/espaco_24"
+                android:background="@drawable/fundo_circulo_azul"
+                android:importantForAccessibility="no"
+                android:padding="36dp"
+                android:src="@drawable/icone_trofeu"
+                app:tint="@color/anil" />
+
+            <TextView
+                style="@style/Texto.Pulso.Destaque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_24"
+                android:text="@string/treino_concluido" />
+
+            <TextView
+                android:id="@+id/textoResumo"
+                style="@style/Texto.Pulso.Corpo.Secundario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_24"
+                android:background="@drawable/fundo_caixa"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/espaco_16">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textoTotalExercicios"
+                        style="@style/Texto.Pulso.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/anil" />
+
+                    <TextView
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exercicios" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textoTotalSeries"
+                        style="@style/Texto.Pulso.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/anil" />
+
+                    <TextView
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/series" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textoVolume"
+                        style="@style/Texto.Pulso.Titulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/anil" />
+
+                    <TextView
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/volume_total" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_16"
+                android:background="@drawable/fundo_cartao_anil"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/espaco_16">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:background="@drawable/fundo_circulo_azul"
+                    android:importantForAccessibility="no"
+                    android:padding="14dp"
+                    android:src="@drawable/icone_medalha"
+                    app:tint="@color/anil" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espaco_16"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nova_conquista"
+                        android:textColor="@color/gelo" />
+
+                    <TextView
+                        android:id="@+id/textoSequencia"
+                        style="@style/Texto.Pulso.Secao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/branco" />
+
+                    <TextView
+                        android:id="@+id/textoMedalha"
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jakarta_regular"
+                        android:textColor="@color/azul_claro" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoVoltarInicio"
+                style="@style/Componente.Pulso.Botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_48"
+                android:text="@string/voltar_ao_inicio" />
+
+            <TextView
+                android:id="@+id/linkHistorico"
+                style="@style/Texto.Pulso.Link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_8"
+                android:text="@string/ver_historico" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

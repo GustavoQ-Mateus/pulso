@@ -1,0 +1,26 @@
+<resources>
+    <string name="exercicio_de">Exercício %1$d de %2$d</string>
+    <string name="descanso">DESCANSO</string>
+    <string name="serie_numero">Série %1$d</string>
+    <string name="carga_repeticoes">%1$skg × %2$d repetições</string>
+    <string name="pular_descanso">Pular descanso</string>
+    <string name="encerrar_treino">Encerrar treino</string>
+
+    <string name="treino_concluido">Treino concluído!</string>
+    <string name="resumo_treino">Treino de %1$s · %2$d min</string>
+    <string name="exercicios">exercícios</string>
+    <string name="series">séries</string>
+    <string name="volume_total">volume total</string>
+    <string name="volume_kg">%1$s kg</string>
+    <string name="nova_conquista">NOVA CONQUISTA</string>
+    <plurals name="sequencia_de_dias">
+        <item quantity="one">Sequência de %d dia</item>
+        <item quantity="other">Sequência de %d dias</item>
+    </plurals>
+    <plurals name="faltam_dias_medalha">
+        <item quantity="one">Falta %d dia para a medalha de 7 dias</item>
+        <item quantity="other">Faltam %d dias para a medalha de 7 dias</item>
+    </plurals>
+    <string name="voltar_ao_inicio">Voltar ao início</string>
+    <string name="ver_historico">Ver histórico</string>
+</resources>
