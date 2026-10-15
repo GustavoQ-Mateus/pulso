@@ -1,0 +1,7 @@
+<resources>
+    <string name="confirme_inscricao">Confirme sua inscrição</string>
+    <string name="instrutor_nome">Instrutor %1$s</string>
+    <string name="vagas_de_total">%1$d de %2$d vagas disponíveis</string>
+    <string name="aviso_cancelamento">Você pode cancelar a inscrição até 2 horas antes do início da aula.</string>
+    <string name="confirmar_inscricao">Confirmar inscrição</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Texto.Pulso.Destaque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/espaco_24"
+        android:layout_marginTop="40dp"
+        android:text="@string/titulo_aulas" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_8"
+        android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupoDias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="4dp"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/espaco_24"
+            android:paddingBottom="@dimen/espaco_24">
+
+
+            <LinearLayout
+                android:id="@+id/bannerSemConexao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_8"
+                android:background="@drawable/fundo_banner_erro"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/espaco_8"
+                android:paddingStart="@dimen/espaco_16"
+                android:paddingEnd="@dimen/espaco_8"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/icone_pequeno"
+                    android:layout_height="@dimen/icone_pequeno"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/icone_sem_wifi"
+                    app:tint="@color/erro" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espaco_16"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/Texto.Pulso.Corpo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jakarta_semibold"
+                        android:text="@string/sem_conexao"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/Texto.Pulso.Legenda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/jakarta_regular"
+                        android:text="@string/sem_conexao_aulas" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/botaoTentar"
+                    style="@style/Texto.Pulso.Link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/espaco_8"
+                    android:text="@string/tentar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listaAulas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navegacao"
+        style="@style/Componente.Pulso.Navegacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_navegacao" />
+</LinearLayout>

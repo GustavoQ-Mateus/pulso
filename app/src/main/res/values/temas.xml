@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Tema.Pulso" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/anil</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorSecondary">@color/azul_claro</item>
+        <item name="colorError">@color/erro</item>
+        <item name="android:colorBackground">@color/branco</item>
+        <item name="colorSurface">@color/branco</item>
+        <item name="colorSurfaceContainerLowest">@color/branco</item>
+        <item name="colorSurfaceContainerLow">@color/branco</item>
+        <item name="colorSurfaceContainer">@color/branco</item>
+        <item name="colorSurfaceContainerHigh">@color/branco</item>
+        <item name="colorSurfaceContainerHighest">@color/branco</item>
+        <item name="colorOnSurface">@color/texto_primario</item>
+        <item name="colorSurfaceInverse">@color/texto_primario</item>
+        <item name="colorOnSurfaceInverse">@color/branco</item>
+        <item name="colorPrimaryInverse">@color/azul_claro</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/jakarta_regular</item>
+        <item name="bottomSheetDialogTheme">@style/Sobreposicao.Pulso.Folha</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+
+    <style name="Tema.Pulso.Abertura">
+        <item name="android:windowBackground">@color/anil</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Sobreposicao.Pulso.Folha" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Componente.Pulso.Folha</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="Componente.Pulso.Folha" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/branco</item>
+        <item name="shapeAppearance">@style/Forma.Pulso.TopoArredondado</item>
+    </style>
+
+    <style name="Forma.Pulso.TopoArredondado" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="Forma.Pulso.Circular" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Texto.Pulso" parent="">
+        <item name="android:textColor">@color/texto_primario</item>
+        <item name="android:fontFamily">@font/jakarta_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Texto.Pulso.Destaque">
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Texto.Pulso.Titulo">
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Texto.Pulso.Secao">
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Texto.Pulso.Corpo" />
+    <style name="Texto.Pulso.Corpo.Secundario">
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.Pulso.Rotulo">
+        <item name="android:fontFamily">@font/jakarta_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Texto.Pulso.Legenda">
+        <item name="android:fontFamily">@font/jakarta_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.Pulso.Link">
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textColor">@color/anil</item>
+        <item name="android:minHeight">@dimen/toque_minimo</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Texto.Pulso.Navegacao">
+        <item name="android:fontFamily">@font/jakarta_medium</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Componente.Pulso.Botao" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/altura_botao</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="backgroundTint">@color/fundo_botao_primario</item>
+        <item name="cornerRadius">@dimen/raio_16</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/branco</item>
+    </style>
+
+    <style name="Componente.Pulso.Botao.Claro">
+        <item name="android:textColor">@color/anil</item>
+        <item name="backgroundTint">@color/branco</item>
+        <item name="cornerRadius">@dimen/raio_12</item>
+    </style>
+
+    <style name="Componente.Pulso.Botao.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/toque_minimo</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:fontFamily">@font/jakarta_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/texto_botao_contorno</item>
+        <item name="strokeColor">@color/borda</item>
+        <item name="cornerRadius">@dimen/raio_12</item>
+    </style>
+
+    <style name="Componente.Pulso.Botao.Perigo" parent="Componente.Pulso.Botao.Contorno">
+        <item name="android:minHeight">@dimen/altura_botao</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/erro</item>
+        <item name="strokeColor">@color/erro</item>
+    </style>
+
+
+    <style name="Componente.Pulso.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeColor">@color/borda_campo</item>
+        <item name="boxStrokeErrorColor">@color/erro</item>
+        <item name="errorTextColor">@color/erro</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="android:textColorHint">@color/texto_secundario</item>
+        <item name="helperTextTextColor">@color/texto_secundario</item>
+        <item name="boxCornerRadiusTopStart">@dimen/raio_12</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/raio_12</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/raio_12</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/raio_12</item>
+        <item name="android:layout_marginTop">@dimen/espaco_8</item>
+    </style>
+
+    <style name="Componente.Pulso.Cartao" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/branco</item>
+        <item name="cardCornerRadius">@dimen/raio_16</item>
+        <item name="strokeColor">@color/borda</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Componente.Pulso.Navegacao" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/branco</item>
+        <item name="elevation">0dp</item>
+        <item name="itemIconTint">@color/item_navegacao</item>
+        <item name="itemTextColor">@color/item_navegacao</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemTextAppearanceActive">@style/Texto.Pulso.Navegacao</item>
+        <item name="itemTextAppearanceInactive">@style/Texto.Pulso.Navegacao</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="Componente.Pulso.ChipDia" parent="Widget.Material3.Chip.Filter">
+        <item name="android:fontFamily">@font/jakarta_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/texto_chip_dia</item>
+        <item name="chipBackgroundColor">@color/fundo_chip_dia</item>
+        <item name="chipStrokeColor">@color/borda_chip_dia</item>
+        <item name="chipCornerRadius">20dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipStartPadding">2dp</item>
+        <item name="chipEndPadding">2dp</item>
+        <item name="textStartPadding">6dp</item>
+        <item name="textEndPadding">6dp</item>
+    </style>
+
+</resources>

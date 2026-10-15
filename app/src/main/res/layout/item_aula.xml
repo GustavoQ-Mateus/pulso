@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Componente.Pulso.Cartao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/espaco_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textoServico"
+            style="@style/Texto.Pulso.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textoHorario"
+            style="@style/Texto.Pulso.Corpo.Secundario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_8"
+            android:drawablePadding="@dimen/espaco_8"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/icone_relogio"
+            app:drawableTint="@color/texto_secundario" />
+
+        <TextView
+            android:id="@+id/textoInstrutor"
+            style="@style/Texto.Pulso.Corpo.Secundario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_4"
+            android:drawablePadding="@dimen/espaco_8"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/icone_pessoa"
+            app:drawableTint="@color/texto_secundario" />
+
+        <TextView
+            android:id="@+id/textoVagas"
+            style="@style/Texto.Pulso.Corpo.Secundario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_4"
+            android:drawablePadding="@dimen/espaco_8"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/icone_grupo"
+            app:drawableTint="@color/texto_secundario" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoInscrever"
+            style="@style/Componente.Pulso.Botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:text="@string/inscrever_se" />
+
+        <TextView
+            android:id="@+id/textoIndisponivel"
+            style="@style/Texto.Pulso.Corpo.Secundario"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:fontFamily="@font/jakarta_medium"
+            android:gravity="center"
+            android:text="@string/indisponivel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoSair"
+            style="@style/Componente.Pulso.Botao.Perigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_16"
+            android:text="@string/sair_da_aula" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="anil">#004AF7</color>
+    <color name="azul_claro">#87B7FE</color>
+    <color name="gelo">#E4F2FE</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="texto_primario">#0F172A</color>
+    <color name="texto_secundario">#64748B</color>
+    <color name="borda">#E2E8F0</color>
+    <color name="erro">#DC2626</color>
+    <color name="erro_suave">#FEF2F2</color>
+</resources>

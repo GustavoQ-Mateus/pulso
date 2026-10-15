@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navInicio"
+        android:icon="@drawable/icone_casa"
+        android:title="@string/aba_inicio" />
+
+    <item
+        android:id="@+id/navTreinos"
+        android:icon="@drawable/icone_halter"
+        android:title="@string/aba_treinos" />
+
+    <item
+        android:id="@+id/navAulas"
+        android:icon="@drawable/icone_calendario"
+        android:title="@string/aba_aulas" />
+
+    <item
+        android:id="@+id/navNotificacoes"
+        android:icon="@drawable/icone_sino"
+        android:title="@string/aba_notificacoes" />
+
+    <item
+        android:id="@+id/navPerfil"
+        android:icon="@drawable/icone_pessoa"
+        android:title="@string/aba_perfil" />
+</menu>

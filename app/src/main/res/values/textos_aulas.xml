@@ -1,0 +1,15 @@
+<resources>
+    <string name="titulo_aulas">Aulas</string>
+    <plurals name="vagas_disponiveis">
+        <item quantity="one">%d vaga disponível</item>
+        <item quantity="other">%d vagas disponíveis</item>
+    </plurals>
+    <string name="sem_vagas">Sem vagas</string>
+    <string name="inscrever_se">Inscrever-se</string>
+    <string name="indisponivel">Indisponível</string>
+    <string name="sair_da_aula">Sair da aula</string>
+    <string name="inscricao_cancelada">Inscrição em %1$s cancelada</string>
+    <string name="sem_conexao">Sem conexão com a internet</string>
+    <string name="sem_conexao_aulas">Horários salvos no aparelho. Inscrições indisponíveis offline.</string>
+    <string name="tentar">Tentar</string>
+</resources>

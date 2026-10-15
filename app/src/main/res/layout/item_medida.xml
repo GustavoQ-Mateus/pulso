@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Componente.Pulso.Cartao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_16">
+
+        <TextView
+            android:id="@+id/textoValor"
+            style="@style/Texto.Pulso.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/anil" />
+
+        <TextView
+            android:id="@+id/textoRotulo"
+            style="@style/Texto.Pulso.Legenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jakarta_regular" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
